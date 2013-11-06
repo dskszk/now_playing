@@ -12,7 +12,7 @@ Plugin.create(:now_playing) do
         rb_player.introspect
         rb_player_iface = rb_player["org.mpris.MediaPlayer2.Player"]
         meta = rb_player_iface["Metadata"]
-        # Please edit message below.
+        # Please edit the message below.
         msg = '"' + meta["xesam:title"] + '"  by ' + meta["xesam:artist"][0] +
             ' #NowPlaying'
         Service.primary.update(:message => msg)
